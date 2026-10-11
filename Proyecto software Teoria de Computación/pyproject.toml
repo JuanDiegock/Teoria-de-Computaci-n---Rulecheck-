@@ -1,2 +1,2 @@
 [tool.vercel]
-entrypoint = "run.py"
+entrypoint = "Proyecto software Teoria de Computación/run.py"
