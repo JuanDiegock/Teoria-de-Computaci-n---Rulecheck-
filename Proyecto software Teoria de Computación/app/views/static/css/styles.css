@@ -1,0 +1,274 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f5fa;
+    color: #1d2d45;
+}
+
+.topbar {
+    background: white;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0e6ef;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    background: #2463eb;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 13px;
+}
+
+.brand h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.brand span {
+    color: #718096;
+    font-size: 12px;
+}
+
+.status {
+    color: #16845b;
+    font-size: 13px;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 30px 5%;
+}
+
+.hero {
+    padding: 30px;
+    border-radius: 16px;
+    color: white;
+    background: linear-gradient(120deg, #173f8c, #4569e8);
+    margin-bottom: 24px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #d3e0ff;
+}
+
+.hero h1 {
+    max-width: 750px;
+    font-size: 32px;
+    line-height: 1.25;
+}
+
+.hero p {
+    line-height: 1.6;
+}
+
+.workspace {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.panel {
+    background: white;
+    border: 1px solid #e0e6ef;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 22px;
+    box-shadow: 0 5px 20px #1d2d4508;
+    min-width: 0;
+}
+
+.panel h2 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin: 18px 0 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    min-height: 250px;
+    resize: vertical;
+    padding: 16px;
+    background: #111d32;
+    color: #dbeafe;
+    border: 1px solid #31415a;
+    border-radius: 10px;
+    font: 13px/1.8 Consolas, monospace;
+}
+
+textarea:focus {
+    outline: 2px solid #8bb1ff;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 15px;
+}
+
+button {
+    border: none;
+    padding: 11px 15px;
+    border-radius: 8px;
+    background: #2463eb;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    filter: brightness(0.92);
+}
+
+button:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+button.secondary {
+    color: #40516b;
+    background: #edf1f7;
+}
+
+.hint {
+    color: #718096;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.summary {
+    background: #f1f5fb;
+    border-radius: 9px;
+    padding: 16px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.metrics div {
+    padding: 14px;
+    border: 1px solid #e1e8f0;
+    border-radius: 9px;
+}
+
+.metrics span {
+    display: block;
+    color: #718096;
+    font-size: 12px;
+}
+
+.metrics strong {
+    display: block;
+    font-size: 24px;
+    margin-top: 8px;
+}
+
+.results {
+    margin-top: 2px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 13px;
+}
+
+th {
+    background: #edf2fa;
+    color: #344b6b;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #e5eaf1;
+}
+
+td:nth-child(2) {
+    color: #2459bd;
+    font-family: Consolas, monospace;
+    font-weight: bold;
+}
+
+td:nth-child(3) {
+    font-family: Consolas, monospace;
+}
+
+.error-title {
+    margin-top: 28px !important;
+}
+
+.error-item {
+    background: #fff0f1;
+    color: #a52d3b;
+    border: 1px solid #ffd5d9;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+.success {
+    color: #13784f;
+    background: #e2f7eb;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 22px;
+    color: #718096;
+    font-size: 12px;
+}
+
+@media (max-width: 800px) {
+    .workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .topbar {
+        padding: 16px 5%;
+    }
+
+    .status {
+        display: none;
+    }
+}

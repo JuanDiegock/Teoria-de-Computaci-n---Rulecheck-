@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RuleCheck - Validador empresarial</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"
+            defer></script>
+</head>
+<body>
+
+<header class="topbar">
+    <div class="brand">
+        <div class="logo">RC</div>
+        <div>
+            <h2>RuleCheck</h2>
+            <span>Analizador de reglas empresariales</span>
+        </div>
+    </div>
+    <span class="status">Python · Flask · MVC</span>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <p class="eyebrow">ANÁLISIS DE REGLAS · PYTHON + MVC</p>
+        <h1>Detección y validación automática de errores</h1>
+        <p>
+            Analiza reglas empresariales para identificar tokens,
+            lexemas y errores sintácticos básicos.
+        </p>
+    </section>
+
+    <section class="workspace">
+
+        <article class="panel">
+            <h2>Regla empresarial</h2>
+
+            <label for="ruleInput">Código de la regla</label>
+
+            <textarea id="ruleInput" spellcheck="false">REGLA validar_venta
+SI monto > 0
+Y stock >= cantidad
+ENTONCES aprobar_venta
+SINO rechazar_venta
+FIN_REGLA</textarea>
+
+            <div class="buttons">
+                <button id="analyzeBtn">Analizar regla</button>
+                <button id="exampleBtn" class="secondary">
+                    Cargar ejemplo
+                </button>
+                <button id="clearBtn" class="secondary">
+                    Limpiar
+                </button>
+            </div>
+
+            <p class="hint">
+                Escribe una instrucción por línea.
+                Usa las palabras reservadas en mayúsculas.
+            </p>
+        </article>
+
+        <article class="panel">
+            <h2>Resultado del análisis</h2>
+
+            <div id="summary" class="summary">
+                Esperando análisis...
+            </div>
+
+            <div class="metrics">
+                <div>
+                    <span>Tokens</span>
+                    <strong id="tokenCount">0</strong>
+                </div>
+                <div>
+                    <span>Líneas</span>
+                    <strong id="lineCount">0</strong>
+                </div>
+                <div>
+                    <span>Errores</span>
+                    <strong id="errorCount">0</strong>
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+    <section class="panel results">
+        <h2>Tokens y lexemas detectados</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Línea</th>
+                        <th>Lexema</th>
+                        <th>Token</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tokensBody">
+                    <tr>
+                        <td colspan="3">
+                            Ejecuta el análisis para ver los resultados.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="error-title">Errores detectados</h2>
+
+        <div id="errorsList">
+            <p>No hay resultados todavía.</p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    RuleCheck | Proyecto académico de teoría de computación
+</footer>
+
+</body>
+</html>
